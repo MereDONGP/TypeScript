@@ -19,6 +19,8 @@ const calculateBMI  = (height: number, weight: number) : result => {
     else if (total > 30){
         return "Obese"
     }
+
+    return "this did not work"
 }
 
 console.log(process.argv[2])

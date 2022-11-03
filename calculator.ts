@@ -10,23 +10,23 @@ interface calculatedResult {
 
 let days : number[] = [3, 0, 2, 4.5, 0, 3, 1]
 
-const exercise = (arr: number[]) : calculatedResult => {
+const exercise = () : calculatedResult => {
     let total = 0
     let days = 0 
     let success = false
     let description = " "
     let rating = 0 
-    let arguments =  process.argv.slice(2, 12)
-    for(let i = 0; i < arguments.length;i++){
-        if (Number(arguments[i]) > 0) {
+    let splitList =  process.argv.slice(2, 12)
+    for(let i = 0; i < splitList.length;i++){
+        if (Number(splitList[i]) > 0) {
             days = days + 1
-            total = total + Number(arguments[i]) 
+            total = total + Number(splitList[i]) 
         }else{
             total = total + 0 
         }
     }
 
-    let average = total / Number(arguments.length) 
+    let average = total / Number(splitList.length) 
 
     if(average > 2 ){
         success = true 
@@ -56,4 +56,4 @@ const exercise = (arr: number[]) : calculatedResult => {
 }
 
 
-console.log(exercise(days))
+console.log(exercise())
