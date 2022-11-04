@@ -27,4 +27,6 @@ console.log(process.argv[2])
 
 console.log(calculateBMI(Number(process.argv[2]), Number(process.argv[3])))
 
+export default calculateBMI
+
 
